@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./post-list.component.less']
 })
 export class PostListComponent {
-  posts: Array<Object> = [];
+  // posts: Array<FormData> = [];
   // posts = [
   //   { title: 'first post', content: 'this is the first post content' },
   //   { title: 'seond post', content: 'this is the second post content' },
