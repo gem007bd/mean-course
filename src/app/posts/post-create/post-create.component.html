@@ -1,5 +1,5 @@
 <mat-card>
-<form (submit)="onAddPost()" #postForm="ngForm">
+<form (submit)="onAddPost(postForm)" #postForm="ngForm">
   <mat-form-field>
     <input
     matInput
@@ -14,6 +14,7 @@
   <mat-form-field>
     <textarea
     matInput
+    rows='4'
     name="content"
     ngModel
     required
