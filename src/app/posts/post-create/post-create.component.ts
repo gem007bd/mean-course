@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 import { Post } from '../post.model' ;
 import { NgForm } from '@angular/forms';
-import { PostService } from '../post.service';
+import { PostsService } from '../post.service';
 
 @Component({
   selector: 'app-post-create',
@@ -11,13 +11,13 @@ import { PostService } from '../post.service';
 })
 export class PostCreateComponent {
 
-  constructor(public postService: PostService ) {}
+  constructor(public postsService: PostsService ) {}
 
   newPost = 'No content';
   onAddPost(form: NgForm) {
     if (form.invalid) {
       return;
     }
-    this.postService.addPost(form.value.title, form.value.content);
+    this.postsService.addPost(form.value.title, form.value.content);
   }
 }
